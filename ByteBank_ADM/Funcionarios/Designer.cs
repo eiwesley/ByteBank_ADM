@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace ByteBank_ADM.Funcionarios
 {
-    public class Diretor:Funcionario
+    public class Designer:Funcionario
     {
-
-        public Diretor(string cpf) : base(cpf, 5000)
+        public Designer(string cpf) : base(cpf, 3000)
         {
-           
+            //Console.WriteLine("Criando um diretor.");
         }
 
         public override double GetBonificacao()
         {
-            return this.Salario * 0.50;
+            return this.Salario * 0.17;
         }
 
         public override void AumentarSalario()
         {
-            this.Salario *= 1.15;
+            this.Salario *= 1.11;
         }
 
     }

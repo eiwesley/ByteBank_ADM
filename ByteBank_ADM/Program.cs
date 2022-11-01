@@ -1,28 +1,59 @@
 ﻿using ByteBank_ADM.Funcionarios;
 using ByteBank_ADM.Utilitario;
 
-Funcionario  pedro = new Funcionario("123456789",2000);
-pedro.Nome = "Pedro";
+#region 
+//Funcionario  pedro = new Funcionario("123456789", 2000);
+//pedro.Nome = "Pedro";
 
-Console.WriteLine(pedro.Nome );
-Console.WriteLine(pedro.GetBonificacao());
+//Console.WriteLine(pedro.Nome );
+//Console.WriteLine(pedro.GetBonificacao());
 
-Diretor roberta = new Diretor("987654321",5000);
-roberta.Nome = "Roberta Silva";
+//Diretor roberta = new Diretor("987654321");
+//roberta.Nome = "Roberta Silva";
 
-Console.WriteLine(roberta.Nome);
-Console.WriteLine(roberta.GetBonificacao());
+//Console.WriteLine(roberta.Nome);
+//Console.WriteLine(roberta.GetBonificacao());
 
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
-gerenciador.Registrar(pedro);
-gerenciador.Registrar(roberta);
+//GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+//gerenciador.Registrar(pedro);
+//gerenciador.Registrar(roberta);
 
-Console.WriteLine("Total de Bonificações: " + gerenciador.TotalDeBonificacao);
-Console.WriteLine("Total de Bonificações: " + Funcionario.TotalDeFuncionarios);
+//Console.WriteLine("Total de Bonificações: " + gerenciador.TotalDeBonificacao);
+//Console.WriteLine("Total de Bonificações: " + Funcionario.TotalDeFuncionarios);
 
-pedro.AumentarSalario();
-roberta.AumentarSalario();
+//pedro.AumentarSalario();
+//roberta.AumentarSalario();
 
-Console.WriteLine("novo Salario Pedro " + pedro.Salario);
+//Console.WriteLine("novo Salario Pedro " + pedro.Salario);
 
-Console.WriteLine("novo salario Roberta " + roberta.Salario);
+//Console.WriteLine("novo salario Roberta " + roberta.Salario);
+#endregion
+
+CalcularBonificacao();
+
+void CalcularBonificacao()
+{
+    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+
+    Designer ulisses = new Designer("123456789");
+    ulisses.Nome = "Ulisses Souza";
+
+    Diretor paula = new Diretor("987654321");
+    paula.Nome = "Paula Souza";
+
+    Auxiliar igor = new Auxiliar("963852741");
+    igor.Nome = "Igor Dias";
+
+    GerenteDeContas camila = new GerenteDeContas("741852963");
+    camila.Nome = "Camila Oliveira";
+
+    gerenciador.Registrar(ulisses);
+    gerenciador.Registrar(paula);
+    gerenciador.Registrar(igor);
+    gerenciador.Registrar(camila);
+
+    Console.WriteLine("Total de Bonificação: " + gerenciador.TotalDeBonificacao);
+
+}
+
+
