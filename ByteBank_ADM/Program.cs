@@ -70,8 +70,18 @@ void UsarSistema()
     ursula.Nome = "Ursula Alcantara";
     ursula.Senha = "231";
 
+    Auxiliar henrique = new Auxiliar("963852741");
+    henrique.Nome = "Henrique Silva";
+    henrique.Senha = "852";
+
+    Designer clovis = new Designer("147258369");
+    clovis.Nome = "Clovis";
+    clovis.Senha = "456";
+
     sistema.Logar(ingrid, "123");
     sistema.Logar(ursula, "963");
+    sistema.Logar(henrique, "963");
+    sistema.Logar(clovis, "963");
 
 }
 
